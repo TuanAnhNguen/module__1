@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+    <style>
+        th, tr, td {
+            border: 1px solid gray;
+        }
+        button {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td colspan="4">
+            <input type="text" id="main">
+        </td>
+    </tr>
+    <tr>
+        <td><input type="button" onclick="Nhap1()" value="1"></td>
+        <td><input type="button" onclick="Nhap2()" value="2"></td>
+        <td><input type="button" onclick="Nhap3()" value="3"></td>
+        <td><input type="button" onclick="Cong()" value="+"></td>
+    </tr>
+    <tr>
+        <td><input type="button" onclick="Nhap4()" value="4"></td>
+        <td><input type="button" onclick="Nhap5()" value="5"></td>
+        <td><input type="button" onclick="Nhap6()" value="6"></td>
+        <td><input type="button" onclick="Tru()" value="-"></td>
+    </tr>
+    <tr>
+        <td><input type="button" onclick="Nhap7()" value="7"></td>
+        <td><input type="button" onclick="Nhap8()" value="8"></td>
+        <td><input type="button" onclick="Nhap9()" value="9"></td>
+        <td><input type="button" onclick="Nhan()" value="x"></td>
+    </tr>
+    <tr>
+        <td><input type="button" onclick="Xoa()" value="C"></td>
+        <td><input type="button" onclick="Nhap0()" value="0"></td>
+        <td><input type="button" onclick="KetQua()" value="="></td>
+        <td><input type="button" onclick="Chia()" value="/"></td>
+    </tr>
+</table>
+<script>
+    function Nhap1() {
+        document.getElementById("main").value += 1;
+    }
+    function Nhap2() {
+        document.getElementById("main").value += 2;
+    }
+    function Nhap3() {
+        document.getElementById("main").value += 3;
+    }
+    function Nhap4() {
+        document.getElementById("main").value += 4;
+    }
+    function Nhap5() {
+        document.getElementById("main").value += 5;
+    }
+    function Nhap6() {
+        document.getElementById("main").value += 6;
+    }
+    function Nhap7() {
+        document.getElementById("main").value += 7;
+    }
+    function Nhap8() {
+        document.getElementById("main").value += 8;
+    }
+    function Nhap9() {
+        document.getElementById("main").value += 9;
+    }
+    function Nhap0() {
+        document.getElementById("main").value += 0;
+    }
+    function Cong() {
+        document.getElementById("main").value += "+";
+    }
+    function Tru() {
+        document.getElementById("main").value += "-";
+    }
+    function Nhan() {
+        document.getElementById("main").value += "*";
+    }
+    function Chia() {
+        document.getElementById("main").value += "/";
+    }
+    function Xoa() {
+        let rong = "";
+        document.getElementById("main").value = rong;
+    }
+    function KetQua() {
+        let tinh = document.getElementById("main").value;
+        let ketQua = eval(tinh);
+        document.getElementById("main").value = ketQua;
+    }
+</script>
+</body>
+</html>
