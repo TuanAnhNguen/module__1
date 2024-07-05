@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực</title>
+</head>
+<body>
+<script>
+    let dkt = +prompt("Điểm kiểm tra: ");
+    let dgk = +prompt("Điểm giữa kỳ: ");
+    let dck = +prompt("Điểm cuối kỳ: ");
+    let dtb = (dkt + dgk*2 + dck*3) / 6;
+    if (dtb > 8) {
+        alert("Học sinh giỏi");
+    } else if (dtb > 6) {
+        alert("Học sinh khá");
+    } else if (dtb > 5) {
+        alert("Học sinh trung bình");
+    }  else {
+        alert("Học sinh yếu");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính cước điện thoại</title>
+</head>
+<body>
+<script>
+    let time = +prompt("Nhập thời gian gọi điện(phút): ");
+    let money;
+    if (time <= 10) {
+        money = time * 500;
+    } else if (time <= 20) {
+        money = 5000 + 800 * (time - 10);
+    } else {
+        money = 13000 + 1000 * (time - 20);
+    }
+    alert("Tiền cước điện thoại là: " + money);
+</script>
+</body>
+</html>

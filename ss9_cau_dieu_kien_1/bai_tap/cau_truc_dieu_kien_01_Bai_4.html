@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập và tìm giá trị lớn nhất 3 số nguyên</title>
+</head>
+<body>
+<h1 id="result"></h1>
+<script>
+    let a = +prompt("Nhập vào số nguyên thứ nhất: ");
+    let b = +prompt("Nhập vào số nguyên thứ hai: ");
+    let c = +prompt("Nhập vào số nguyên thứ ba: ");
+    let result;
+    if (a > b && a > c) {
+        result = a + " là số nguyên lớn nhất";
+    } else if (b > a && b > c) {
+        result = b + " là số nguyên lớn nhất";
+    } else {
+        result = c + " là số nguyên lớn nhất";
+    }
+    document.getElementById("result").innerHTML = result;
+</script>
+</body>
+</html>
