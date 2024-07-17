@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra phần tử V trong mảng và xoá phần tử V khỏi mảng</title>
+</head>
+<body>
+<script>
+    let num = [2,13,4,-5,45,890,-34,9,98,12];
+    document.write("Chuỗi ban đầu là: " + num + "<br>");
+    let v = +prompt("Nhập số nguyên V: ");
+    if (num.indexOf(v) !== -1) {
+        document.write(v + " có nằm trong mảng" + "<br>");
+        document.write("Xoá " + v + " ra khỏi mảng" + "<br>");
+        let p = num.indexOf(v);
+        num.splice(p,1);
+        document.write("Mảng mới là: " + num);
+    } else {
+        document.write(v + " không nằm trong mảng");
+    }
+</script>
+</body>
+</html>

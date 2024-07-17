@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<h2>Từ Điển Tiếng Anh</h2>
+<label><input type="text" id="english"></label>
+<button type="button" onclick="trans()">Dịch</button>
+<p id="mean"></p>
+<script>
+    let en = ["school", "go", "hello", "home"];
+    let vn = ["trường học", "đi", "xin chào", "nhà"];
+    function trans() {
+        let word = document.getElementById("english").value;
+        if (en.indexOf(word) !== -1) {
+            let p = en.indexOf(word);
+            document.getElementById("mean").innerText = "Từ này có nghĩa tiếng Việt là: " + vn[p];
+        } else {
+            document.getElementById("mean").innerText = "Không tìm thấy";
+        }
+    }
+</script>
+</body>
+</html>

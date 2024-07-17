@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình khởi tạo mảng số nguyên gồm 10 phần từ</title>
+</head>
+<body>
+<script>
+    let num = [2,13,4,-5,45,890,-34,9,98,12];
+    let y = 0;
+    document.write("Mảng ban đầu: " + num + "<br>");
+    for (let x = 0; x <= 10; x++) {
+        if (num[x] >= 10) {
+            y += 1;
+        }
+    }
+    document.write("Có " + y + " số nguyên lớn hơn hoặc bằng 10");
+</script>
+</body>
+</html>
