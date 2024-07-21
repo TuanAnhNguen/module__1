@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập 1 mảng ký tự, tìm trong mảng ký tự - và thay bằng _</title>
+</head>
+<body>
+<script>
+    let symbols = prompt("Nhập vào các ký tự: ");
+    let arr = [];
+    for (let i = 0; i <= symbols.length; i++) {
+        arr.push(symbols[i]);
+    }
+    document.write("Mảng ký tự vừa nhập là: " + arr + "<br>");
+    for (let j = 0; j <= arr.length; j++) {
+        if (arr[j] === "-") {
+            arr.splice(j, 1, "_");
+        }
+    }
+    document.write("Mảng ký tự thay thế là: " + arr);
+</script>
+</body>
+</html>

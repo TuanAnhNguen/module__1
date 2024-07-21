@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số từ trong một chuỗi</title>
+</head>
+<body>
+<script>
+    let character = prompt("Nhập vào các ký tự: ");
+    document.write("Chuỗi vừa nhập là: " + character + "<br>");
+    let wordArray = character.split(/\s+/);
+    let wordCount = wordArray.length;
+    document.write("Số từ trong chuỗi trên là: " + wordCount);
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình khai báo 1 mảng ký tự và kích thước và đếm số ký tự Số trong mảng</title>
+</head>
+<body>
+<script>
+    let character = prompt("Nhập vào các ký tự: ");
+    let arr = [];
+    for (let i = 0; i < character.length; i++) {
+        arr.push(character[i]);
+    }
+    document.write("Các ký tự đã nhập là: " + character + "<br>");
+
+    let size = character.length;
+    document.write("Kích thước của mảng vừa nhập là: " + size + "<br>");
+
+    let digitCount = 0;
+    for (let j = 0; j < size; j++) {
+        if (!isNaN(character[j])) {
+            digitCount++;
+        }
+    }
+    document.write("Số lượng ký tự số trong mảng là: " + digitCount + "<br>");
+</script>
+</body>
+</html>

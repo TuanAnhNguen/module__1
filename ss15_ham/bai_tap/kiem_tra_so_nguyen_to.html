@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm kiểm tra số nguyên tố</title>
+</head>
+<body>
+<script>
+    function isPrime(number) {
+        if (number <= 1) {
+            return false; // Số <= 1 không phải số nguyên tố
+        }
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i === 0) {
+                return false; //Nếu chia hết cho i thì không phải số nguyên tố
+            }
+        }
+        return true; // không chia hết cho số nào thì là số nguyên tố
+    }
+    let primeNumbers = [];
+    for (let i = 2; i < 1000; i++) {
+        if (isPrime(i)) {
+            primeNumbers.push(i)
+        }
+    }
+    document.write("Các số sau đây là số nguyên tố: " + primeNumbers);
+</script>
+</body>
+</html>
