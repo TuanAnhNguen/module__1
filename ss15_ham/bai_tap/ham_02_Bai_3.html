@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm tính giai thừa của 1 số nguyên bất kỳ</title>
+</head>
+<body>
+<script>
+    let num = +prompt("Nhập số nguyên bất kỳ: ");
+    let result = 1;
+    function giaiThua() {
+        for (let i = 1; i <= num; i++) {
+            result *= i;
+        }
+        document.write(`Giai thừa của ${num} là ${result}`);
+    }
+    giaiThua();
+</script>
+</body>
+</html>

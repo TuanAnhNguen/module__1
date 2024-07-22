@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm nhận vào 3 số nguyên bất kỳ v trả về số nhỏ nhât</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhập vào số nguyên thứ nhất: ");
+    let b = +prompt("Nhập vào số nguyên thứ hai: ");
+    let c = +prompt("Nhập vào số nguyên thứ ba: ");
+    function min() {
+        if (a <= b && a <= c) {
+            alert(`${a} là số nguyên nhỏ nhất`);
+        } else if (b <= a && b <= c) {
+            alert(`${b} là số nguyên nhỏ nhất`);
+        } else {
+            alert(`${c} là số nguyên nhỏ nhất`);
+        }
+    }
+    min();
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm truyền vào 2 số nguyên bất kỳ và đổi chỗ 2 số nguyên đó</title>
+</head>
+<body>
+<script>
+    function swapNumber(a, b) {
+        let temp = a;
+        a = b;
+        b = temp;
+        return [a, b];
+    }
+    let x = +prompt("Nhập số thứ nhất: ");
+    let y = +prompt("Nhập số thứ hai: ");
+    alert(`Thứ tự hai số là: x = ${x}, y = ${y}`);
+    [x, y] = swapNumber(x, y);
+    alert(`Thứ tự đổi chỗ là: x = ${x}, y = ${y}`);
+</script>
+</body>
+</html>

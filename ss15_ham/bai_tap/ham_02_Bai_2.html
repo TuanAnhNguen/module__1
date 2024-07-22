@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm tính diện tích, chu vi hình tròn</title>
+</head>
+<body>
+<script>
+    let r = +prompt("Nhập vào bán kính hình tròn: ");
+    let c;
+    let s;
+    const PI = 3.14159;
+    function chuVi() {
+        c = 2 * PI * r;
+        return c;
+    }
+    function dienTich() {
+        s = PI * r * r;
+        return s;
+    }
+    document.write(`Chu vi hình tròn là ${chuVi()}` + "<br>");
+    document.write(`Diện tích hình tròn là ${dienTich()}` + "<br>");
+</script>
+</body>
+</html>

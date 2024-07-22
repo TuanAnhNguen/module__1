@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo hàm nhận vào 1 đối số dạng số và tăng giá trị lên 1</title>
+</head>
+<body>
+<label>Nhập vào môt số: </label>
+<input type="number" id="inputNumber" value="0">
+<button onclick="result()">Tăng giá trị</button>
+<p id="result">Result: </p>
+<script>
+    function doiSo(number) {
+        return number + 1;
+    }
+    function result() {
+        let inputNumber = parseInt(document.getElementById("inputNumber").value);
+        let result = doiSo(inputNumber);
+        document.getElementById("result").innerText = "Result: " + result;
+    }
+</script>
+</body>
+</html>
