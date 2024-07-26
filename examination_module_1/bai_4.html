@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Phone {
+        constructor(code, name, manufacturer, price) {
+            this.code = code;
+            this.name = name;
+            this.manufacturer = manufacturer;
+            this.price = price;
+        }
+        getCode() {
+            return this.code;
+        }
+        getName() {
+            return this.name;
+        }
+        getManufacturer() {
+            return this.manufacturer;
+        }
+        getPrice() {
+            return this.price;
+        }
+        setCode(code) {
+            this.code = code;
+        }
+        setName(name) {
+            this.name = name;
+        }
+        setManufacturer(manufacturer) {
+            this.manufacturer = manufacturer;
+        }
+        setPrice(price) {
+            this.price = price;
+        }
+        toString() {
+            return `Code: ${this.code}, Name: ${this.name}, Manufacturer: ${this.manufacturer}, Price: ${this.price}`;
+        }
+    }
+    let phoneList = [];
+    function addPhone() {
+        let phones = [
+            ["01", "iphone 12", "Apple", "1000"],
+            ["02", "samsung galaxy", "SamSung", "8000"],
+            ["03", "xiaomi redmi 13", "Xiaomi", "500"],
+        ]
+        for (let i = 0; i < phones.length; i++) {
+            let [code, name, manufacturer, price] = phones[i];
+            let phone = new Phone(code, name, manufacturer, price);
+            phoneList.push(phone);
+        }
+    }
+    addPhone();
+    function display() {
+        phoneList.sort();
+        for (let i = 0; i < phoneList.length; i++) {
+            console.log(phoneList[i].toString())
+        }
+    }
+    display();
+</script>
+</body>
+</html>

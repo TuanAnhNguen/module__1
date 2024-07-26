@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = +prompt("Nhập số lượng phần từ trong mảng (n <= 20): ");
+    if (num <= 0 || num > 20) {
+        alert("Số lượng phần tử phải nhỏ hơn 20!");
+    } else {
+        let arr = [];
+        let evenSum = 0;
+        let oddSum = 0;
+        for (let i = 0; i < num; i++) {
+            let numbers = +prompt(`Nhập phần thử thứ ${i+1}`);
+            arr.push(numbers);
+        }
+        document.write("Danh sách các phần từ là: " + arr + "<br>");
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 === 0) {
+                evenSum += arr[i];
+            } else {
+                oddSum += arr[i];
+            }
+        }
+        let difference = evenSum - oddSum;
+        document.write("Tổng các số chẵn trong mảng là: " + evenSum + "<br>");
+        document.write("Tổng các số lẻ trong mảng là: " + oddSum + "<br>");
+        document.write("Hiệu của tổng các số chẵn và tổng các số lẻ trong mảng là: " + difference + "<br>");
+    }
+</script>
+</body>
+</html>

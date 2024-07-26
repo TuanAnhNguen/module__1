@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = prompt("Nhập vào chuỗi ký tự: ");
+    document.write("Chuỗi ký tự vừa nhập là: " + x + "<br>");
+    function checkCharacter(x) {
+        let uppercaseCount = 0;
+        for (let char of x) {
+            if (char === char.toUpperCase() && isNaN(char)) {
+                uppercaseCount++;
+            }
+        }
+        if (uppercaseCount > 0) {
+            return uppercaseCount;
+        } else {
+            return "The Strings is not contain upper char"
+        }
+    }
+    document.write("Số lượng ký tự in hoa trong chuỗi là: " + checkCharacter(x));
+</script>
+</body>
+</html>
