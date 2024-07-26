@@ -2,9 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Quản lý sản phẩm</title>
 </head>
 <body>
-
+<h1>Quản lý sản phẩm</h1>
+<div class="input">
+    <table class="table1" border="1" style="border-collapse: collapse">
+        <tr class="logo" style="background-color: royalblue">
+            <th colspan="2" class="th1" style="color: white">Thông tin sản phẩm</th>
+        </tr>
+        <tr>
+            <td>Mã sản phẩm</td>
+            <td>
+                <input type="text" id="id">
+            </td>
+        </tr>
+        <tr>
+            <td>Tên sản phẩm</td>
+            <td>
+                <input type="text" id="name">
+            </td>
+        </tr>
+        <tr>
+            <td>Màu sắc</td>
+            <td>
+                <input type="text" id="color">
+            </td>
+        </tr>
+        <tr>
+            <td>Số lượng</td>
+            <td>
+                <input type="number" id="quantity">
+            </td>
+        </tr>
+        <tr>
+            <td>Giá sản phẩm</td>
+            <td>
+                <input type="number" id="price">
+            </td>
+        </tr>
+        <tr>
+            <td>Ảnh sản phầm</td>
+            <td>
+                <input type="file" id="img">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="2">
+                <button onclick="addProduct()">Thêm sản phẩm</button>
+                <button id="saveButton" onclick="save()">Lưu</button>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="list-product">
+    <table class="table2" style="border-collapse: collapse">
+        <thead>
+        <tr style="background-color: royalblue">
+            <th colspan="8" style="color: white">Danh sách sản phẩm</th>
+        </tr>
+        <tr style="background-color: white">
+            <th>Mã sản phầm</th>
+            <th>Tên sản phầm</th>
+            <th>Màu sắc</th>
+            <th>Số lượng</th>
+            <th>Giá sản phầm</th>
+            <th>Ảnh sản phầm</th>
+            <th colspan="2">Tuỳ chọn</th>
+        </tr>
+        </thead>
+        <tbody id="body" style="text-align: center"></tbody>
+    </table>
+</div>
+<input type="hidden" id="currentIndex">
+<script src="product.js"></script>
+<link rel="stylesheet" href="style.css">
 </body>
 </html>
