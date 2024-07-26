@@ -8,6 +8,42 @@ class Product {
         this.price = price;
         this.img = img;
     }
+    getId(){
+        return this.id;
+    }
+    getName(){
+        return this.name;
+    }
+    getColor(){
+        return this.color;
+    }
+    getQuantity(){
+        return this.quantity;
+    }
+    getPrice(){
+        return this.price;
+    }
+    getImg(){
+        return this.img;
+    }
+    setImg(img){
+        this.img = img;
+    }
+    setName(name){
+        this.name = name;
+    }
+    setColor(color){
+        this.color = color;
+    }
+    setQuantity(quantity){
+        this.quantity = quantity;
+    }
+    setPrice(price){
+        this.price = price;
+    }
+    setImg(img){
+        this.img = img;
+    }
     edit(id, name, color, quantity, price, img) {
         this.id = id;
         this.name = name;
@@ -64,7 +100,7 @@ function clear() {
     document.getElementById("quantity").value = "";
     document.getElementById("price").value = "";
     document.getElementById("img").value = "";
-    document.getElementById("saveButton").style.display = "none";
+    document.getElementById("saveButton").style.body = "none";
 }
 function del(index) {
     let product = arrProduct[index];
@@ -83,9 +119,9 @@ function fix(index) {
     document.getElementById("color").value = product.color;
     document.getElementById("quantity").value = product.quantity;
     document.getElementById("price").value = product.price;
-    document.getElementById("img").value = product.img;
+    // document.getElementById("img").value = product.img;
     document.getElementById("currentIndex").value = index;
-    document.getElementById("saveButton").style.display = "inline-block";
+    document.getElementById("saveButton").style.body = "inline-block";
 }
 function save() {
     let index = document.getElementById("currentIndex").value;
@@ -94,9 +130,9 @@ function save() {
     let newColor = document.getElementById("color").value;
     let newQuantity = document.getElementById("quantity").value;
     let newPrice = document.getElementById("price").value;
-    let newImg = document.getElementById("img").value;
+    let newImg = document.getElementById("img").files;
     arrProduct[index].edit(newId, newName, newColor, newQuantity, newPrice, newImg);
     display();
     clear();
-    document.getElementById("currentIndex").value = -1;
+    document.getElementById("currentIndex").value = "";
 }
